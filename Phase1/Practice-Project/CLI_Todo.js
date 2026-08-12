@@ -6,37 +6,48 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 const TodoList = [];
-while (true) {
-    console.log("1. Add Todo");
-    console.log("2. View Todos");
-    console.log("3. Update Todo");
-    console.log("4. Delete Todo");
-    console.log("5. Exit");
-    rl.question("Enter your choice: ", (choice) => {
+async function main() {
+    while (true) {
+        console.log("1. Add Todo");
+        console.log("2. View Todos");
+        console.log("3. Update Todo");
+        console.log("4. Delete Todo");
+        console.log("5. Exit");
+        const choice = await askQuestion("Enter your choice: ");
         switch (choice) {
-            case "1":
-                rl.question("Enter todo title: ", (title) => {
-                    addTodo(title);
-                });
+            case "1": {
+                const title = await askQuestion("Enter todo title: ");
+                addTodo(title);
                 break;
+            }
             case "2":
                 viewTodos();
                 break;
-            case "3":
-                rl.question("Enter todo ID to Update : ", (id) => {
-                    updateTodo(parseInt(id));
-                });
+            case "3": {
+                const id = await askQuestion("Enter todo ID to update: ");
+                const numericId = parseInt(id);
+                await updateTodo(numericId);
                 break;
-            case "4":
-                rl.question("Enter todo id: ", (id) => {
-                    deleteTodo(parseInt(id));
-                });
+            }
+            case "4": {
+                const id = await askQuestion("Enter todo id: ");
+                const numericId = parseInt(id);
+                deleteTodo(numericId);
                 break;
+            }
             case "5":
                 console.log("Exiting...");
                 rl.close();
-                break;
+                return;
         }
+    }
+}
+main();
+function askQuestion(msg) {
+    return new Promise((resolve) => {
+        rl.question(msg, (answer) => {
+            resolve(answer);
+        });
     });
 }
 function addTodo(title) {
@@ -53,13 +64,12 @@ function viewTodos() {
         console.log(`ID: ${todo.id}, Title: ${todo.title}, Status: ${todo.status}`);
     }
 }
-function updateTodo(id) {
+async function updateTodo(id) {
     const todo = TodoList.find(todo => todo.id === id);
     if (todo) {
-        rl.question("Enter new title: ", (newTitle) => {
-            todo.title = newTitle;
-            console.log("Todo updated successfully!");
-        });
+        const newTitle = await askQuestion("Enter new title: ");
+        todo.title = newTitle;
+        console.log("Todo updated successfully!");
     }
     else {
         console.log("Todo not found!");
