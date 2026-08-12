@@ -102,3 +102,7 @@ function deleteTodo(id: number):void{
         console.log("Todo not found!");
     }
 }
+
+// how to run 
+// type tsc and enter
+// node .\dist\CLI_Todo.js press enter
