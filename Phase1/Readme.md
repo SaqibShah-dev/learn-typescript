@@ -1,5 +1,16 @@
 # TypeScript Phase 1: Beginner Fundamentals
 
+This folder is a personal TypeScript learning project, created to help you learn the basics step by step.
+
+It is designed for beginners and for anyone who wants a clear, practical introduction to TypeScript. Each topic includes example code and comparisons that make it easier to understand how TypeScript improves JavaScript.
+
+## Overview
+
+- Personal learning project built around TypeScript fundamentals.
+- Phase 1 covers beginner topics with simple, practical examples.
+- Each topic includes TypeScript examples and a few reference notes to help you learn.
+- Great for learners who want to follow a structured, beginner-friendly path.
+
 Welcome to Phase 1 of your TypeScript learning journey.
 
 This phase is designed to help beginners understand the core building blocks of TypeScript in a simple and practical way. The goal is not only to learn the syntax, but also to understand why TypeScript is useful and how it makes JavaScript safer and easier to maintain.
