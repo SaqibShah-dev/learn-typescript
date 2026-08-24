@@ -1,45 +1,60 @@
 # Learn TypeScript
 
-Welcome to Learn TypeScript, a beginner-friendly repository created for learning and practicing core TypeScript concepts.
+A structured, hands-on TypeScript learning repository that moves from language fundamentals to typed React applications. Each phase contains focused examples, practice code, and progressively more realistic projects.
 
-This project is designed for students, self-learners, and anyone who wants to understand TypeScript step by step in a simple and structured way.
+## Learning Roadmap
 
-## What This Repository Covers
+| Phase | Focus | Status |
+| --- | --- | --- |
+| [Phase 1](Phase1/Readme.md) | TypeScript fundamentals: annotations, inference, objects, interfaces, aliases, unions, and more | Available |
+| [Phase 2](Phase2/Readme.md) | Intermediate and advanced types: generics, constraints, narrowing, literal types, enums, and discriminated unions | Available |
+| [Phase 3](Phase3/Readme.md) | React with TypeScript: props, state, events, refs, context, custom hooks, and forwarded refs | Available |
+| Phase 4 | Future learning material | Planned |
+| Phase 5 | Future learning material | Planned |
+| Phase 6 | Future learning material | Planned |
 
-This repository includes beginner-focused topics such as:
+## Repository Highlights
 
-- Type annotations
-- Type inference
-- Arrays and tuples
-- Objects and interfaces
-- Type aliases
-- Union types
-- Optional properties
-- Any vs unknown
-- Never and void
+- Small examples that focus on one TypeScript concept at a time.
+- TypeScript source files paired with compiled JavaScript examples where available.
+- A React and TypeScript todo dashboard in [Phase 3](Phase3/PracticeProject/todo-dashboard/README.md).
+- A gradual progression from basic syntax to reusable, type-safe application code.
 
-## Project Structure
+## Getting Started
 
-- Phase1/ - Beginner fundamentals and core TypeScript concepts
+1. Start with [Phase 1](Phase1/Readme.md) if you are new to TypeScript.
+2. Read the phase README before opening its examples.
+3. Open each `.ts` file and experiment with the code.
+4. Introduce small changes or type errors to understand the compiler feedback.
+5. Move to the next phase when the current concepts feel familiar.
 
-## Why This Repository Exists
+## Running the Todo Dashboard
 
-The goal of this repository is to make TypeScript learning easier by:
+The Phase 3 practice project is a Vite application. From the project directory:
 
-- breaking concepts into small, manageable topics
-- providing a clean folder structure
-- helping learners practice with real examples
-- making the content easy to follow for beginners
+```bash
+cd Phase3/PracticeProject/todo-dashboard
+npm install
+npm run dev
+```
 
-## How to Use This Repository
+Useful checks for the project:
 
-1. Start with the Phase1 folder.
-2. Read the notes and examples carefully.
-3. Practice each concept by writing your own examples.
-4. Build your understanding gradually before moving to more advanced topics.
+```bash
+npm run build
+npm run lint
+```
 
-## Learning Goal
+## Learning Goals
 
-By the end of this journey, you should have a strong foundation in TypeScript basics and feel more confident writing typed JavaScript code.
+By working through this repository, you will build confidence in:
 
-Happy learning!
+- writing safer JavaScript with TypeScript
+- modeling data with precise and reusable types
+- understanding how TypeScript narrows and checks values
+- applying types to React components and application logic
+- reading compiler errors and improving code through experimentation
+
+## Contributing to Your Learning
+
+This is a practice repository, so feel free to create additional examples, improve explanations, and record questions as you learn. Keep examples focused and place new material in the phase that best matches its difficulty.
