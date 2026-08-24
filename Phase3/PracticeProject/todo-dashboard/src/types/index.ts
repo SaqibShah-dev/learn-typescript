@@ -15,3 +15,15 @@ export interface User {
   name: string;
   email: string;
 }
+
+export interface AuthContextType {
+  user: User | null;
+  login: (email:string,password:string) => void;
+  logout: () => void;
+}
+
+export type LoginFormState = {
+  email: string;
+  password: string;
+};
+
