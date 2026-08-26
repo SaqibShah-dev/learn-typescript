@@ -1,6 +1,6 @@
 # Learn TypeScript
 
-A structured, hands-on TypeScript learning repository that moves from language fundamentals to typed React applications. Each phase contains focused examples, practice code, and progressively more realistic projects.
+A hands-on TypeScript learning path that grows from language fundamentals into typed frontend and backend applications. Each phase contains focused examples, practice code, and a project that combines the ideas covered so far.
 
 ## Learning Roadmap
 
@@ -9,24 +9,42 @@ A structured, hands-on TypeScript learning repository that moves from language f
 | [Phase 1](Phase1/Readme.md) | TypeScript fundamentals: annotations, inference, objects, interfaces, aliases, unions, and more | Available |
 | [Phase 2](Phase2/Readme.md) | Intermediate and advanced types: generics, constraints, narrowing, literal types, enums, and discriminated unions | Available |
 | [Phase 3](Phase3/Readme.md) | React with TypeScript: props, state, events, refs, context, custom hooks, and forwarded refs | Available |
-| Phase 4 | Future learning material | Planned |
+| [Phase 4](Phase4/Readme.md) | TypeScript with Express: typed REST routes, middleware, error handling, and project structure | Available |
 | Phase 5 | Future learning material | Planned |
 | Phase 6 | Future learning material | Planned |
 
-## Repository Highlights
+## Repository Map
 
-- Small examples that focus on one TypeScript concept at a time.
-- TypeScript source files paired with compiled JavaScript examples where available.
-- A React and TypeScript todo dashboard in [Phase 3](Phase3/PracticeProject/todo-dashboard/README.md).
-- A gradual progression from basic syntax to reusable, type-safe application code.
+```text
+Phase1/  TypeScript fundamentals and small examples
+Phase2/  Advanced type-system patterns and small examples
+Phase3/  React + TypeScript examples and todo dashboard
+Phase4/  Express + TypeScript examples and todo REST API
+Phase5/  Planned material
+Phase6/  Planned material
+```
+
+Most topic folders contain a `.ts` example and, where applicable, its compiled `.js` output. The main practice projects are:
+
+- [Todo dashboard](Phase3/PracticeProject/todo-dashboard/README.md): a React and Vite frontend.
+- [Todo API](Phase4/Readme.md): an Express REST API backed by an in-memory store.
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js and npm
+- A code editor with TypeScript support, such as VS Code
+- Basic JavaScript familiarity
+
+### Recommended Path
+
 1. Start with [Phase 1](Phase1/Readme.md) if you are new to TypeScript.
-2. Read the phase README before opening its examples.
-3. Open each `.ts` file and experiment with the code.
-4. Introduce small changes or type errors to understand the compiler feedback.
-5. Move to the next phase when the current concepts feel familiar.
+2. Read each phase README before opening its examples.
+3. Run the examples or projects, then change values and types to observe compiler feedback.
+4. Move to the next phase when the current concepts feel familiar.
+
+The repository has no root-level npm project. Install dependencies from the practice project directory you want to run.
 
 ## Running the Todo Dashboard
 
@@ -45,6 +63,22 @@ npm run build
 npm run lint
 ```
 
+## Running the Todo API
+
+The Phase 4 practice project is an Express application. From the API directory:
+
+```bash
+cd Phase4/type-todo-api
+npm install
+npm run dev
+```
+
+The API listens on `http://localhost:3000` by default. Build it with:
+
+```bash
+npm run build
+```
+
 ## Learning Goals
 
 By working through this repository, you will build confidence in:
@@ -57,4 +91,4 @@ By working through this repository, you will build confidence in:
 
 ## Contributing to Your Learning
 
-This is a practice repository, so feel free to create additional examples, improve explanations, and record questions as you learn. Keep examples focused and place new material in the phase that best matches its difficulty.
+This is a practice repository, so create additional examples, improve explanations, and record questions as you learn. Keep examples focused, preserve the existing folder structure, and place new material in the phase that best matches its difficulty.
